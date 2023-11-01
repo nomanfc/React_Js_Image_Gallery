@@ -1,7 +1,11 @@
+import GalleryApp from "./components/Gallery/GalleryApp";
+
 function App() {
   return (
     <div>
-      <div>React Image Gallery</div>
+      <div>
+        <GalleryApp/>
+      </div>
     </div>
   );
 }
