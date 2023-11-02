@@ -1,15 +1,96 @@
 .outerContainer {
   height: 100vh;
   width: 100%;
+  margin: auto;
   display: flex;
   align-items: center;
 }
 
 .mainContainer {
-  /* border: 1px solid red; */
-  height: 90%;
-  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "header"
+    "body";
+  gap: 5px;
+  padding: 20px;
+  width: fit-content;
   margin: auto;
-  border-radius: 10px;
 }
 
+.navbar {
+  grid-area: header;
+  /* background-color: #3498db; */
+  color: black;
+  padding: 20px 20px;
+  border-radius: 10px 10px 0px 0px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.imageContainer {
+  grid-area: body;
+  /* background-color: #ecf0f1; */
+  padding: 20px;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.imageGrids {
+  display: grid;
+  grid-template-columns: repeat(5, 200px);
+  grid-auto-rows: 200px;
+  grid-gap: 10px;
+}
+
+.featuredImage {
+  grid-column: span 2;
+  grid-row: span 2;
+  /* border:  1px solid black; */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.gridItem {
+  /* border: 1px solid black; */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.checkbox{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .mainContainer {
+    grid-template-areas:
+      "header header"
+      "body body";
+  }
+
+  .imageGrids {
+    grid-auto-rows: 200px;
+    grid-template-columns: repeat(
+      3,
+      200px
+    ); /* Adjust columns for smaller screens */
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .imageGrids {
+    grid-auto-rows: 150px;
+    grid-template-columns: repeat(
+      2,
+      150px
+    ); /* Adjust columns for smaller screens */
+  }
+}
