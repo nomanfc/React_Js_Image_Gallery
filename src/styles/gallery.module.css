@@ -45,16 +45,6 @@
   grid-gap: 20px;
 }
 
-.featuredImage {
-  grid-column: span 2;
-  grid-row: span 2;
-  /* border:  1px solid black; */
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
-    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
-  border-radius: 10px;
-  position: relative;
-}
-
 .gridItem {
   /* border: 1px solid black; */
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
@@ -63,7 +53,12 @@
   position: relative;
 }
 
-.checkbox{
+.gridItem:first-child {
+  grid-row: span 2; /* This makes the first item span 2 rows */
+  grid-column: span 2; /* This makes the first item span 2 columns */
+}
+
+.checkbox {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -85,10 +80,7 @@
 
   .imageGrids {
     grid-auto-rows: 130px;
-    grid-template-columns: repeat(
-      4,
-      130px
-    ); 
+    grid-template-columns: repeat(4, 130px);
   }
 }
 
