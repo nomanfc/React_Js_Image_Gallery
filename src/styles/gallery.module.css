@@ -40,9 +40,9 @@
 
 .imageGrids {
   display: grid;
-  grid-template-columns: repeat(5, 200px);
-  grid-auto-rows: 200px;
-  grid-gap: 10px;
+  grid-template-columns: repeat(5, 150px);
+  grid-auto-rows: 150px;
+  grid-gap: 20px;
 }
 
 .featuredImage {
@@ -69,28 +69,40 @@
   left: 10px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 950px) {
   .mainContainer {
+    width: fit-content;
     grid-template-areas:
       "header header"
       "body body";
+    padding: 5px;
   }
 
+  /* .featuredImage {
+    grid-column: span 3;
+    grid-row: span 3;
+  } */
+
   .imageGrids {
-    grid-auto-rows: 200px;
+    grid-auto-rows: 130px;
     grid-template-columns: repeat(
-      3,
-      200px
-    ); /* Adjust columns for smaller screens */
+      4,
+      130px
+    ); 
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 650px) {
   .imageGrids {
-    grid-auto-rows: 150px;
+    grid-auto-rows: 130px;
     grid-template-columns: repeat(
       2,
-      150px
+      130px
     ); /* Adjust columns for smaller screens */
+  }
+
+  .mainContainer {
+    width: fit-content;
+    padding: 5px;
   }
 }
