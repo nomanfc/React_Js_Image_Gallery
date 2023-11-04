@@ -10,32 +10,29 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
-  grid-template-areas:
-    "header"
-    "body";
+  grid-template-areas: "header" "body";
   gap: 5px;
   padding: 20px;
   width: fit-content;
   margin: auto;
 }
 
-.navbar {
-  grid-area: header;
-  /* background-color: #3498db; */
-  color: black;
-  padding: 20px 20px;
+.navbar,
+.imageContainer {
+  padding: 20px;
   border-radius: 10px 10px 0px 0px;
   box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
     rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 
+.navbar {
+  grid-area: header;
+  color: black;
+}
+
 .imageContainer {
   grid-area: body;
-  /* background-color: #ecf0f1; */
-  padding: 20px;
   border-radius: 0px 0px 10px 10px;
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
-    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 
 .imageGrids {
@@ -46,37 +43,43 @@
 }
 
 .gridItem {
-  /* border: 1px solid black; */
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
     rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
   border-radius: 10px;
   position: relative;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .gridItem:first-child {
-  grid-row: span 2; /* This makes the first item span 2 rows */
-  grid-column: span 2; /* This makes the first item span 2 columns */
+  grid-row: span 2; 
+  grid-column: span 2; 
+}
+
+.gridItem:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
 }
 
 .checkbox {
   position: absolute;
   top: 10px;
   left: 10px;
+  opacity: 0;
+  cursor: pointer;
+  transition: top 0.3s ease-in-out, left 0.3s ease-in-out;
 }
+
+.gridItem:hover .checkbox {
+  opacity: 1;
+}
+
 
 @media screen and (max-width: 950px) {
   .mainContainer {
     width: fit-content;
-    grid-template-areas:
-      "header header"
-      "body body";
+    grid-template-areas: "header header" "body body";
     padding: 5px;
   }
-
-  /* .featuredImage {
-    grid-column: span 3;
-    grid-row: span 3;
-  } */
 
   .imageGrids {
     grid-auto-rows: 130px;
@@ -90,7 +93,7 @@
     grid-template-columns: repeat(
       2,
       130px
-    ); /* Adjust columns for smaller screens */
+    );
   }
 
   .mainContainer {
