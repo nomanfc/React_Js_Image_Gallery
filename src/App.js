@@ -1,13 +1,9 @@
-import GalleryApp from "./components/Gallery/GalleryApp";
-
-
+import Gallery from "./components/organisms/Gallery.jsx"
 function App() {
   return (
-    <div>
-      <div>
-          <GalleryApp />
-      </div>
-    </div>
+    <>
+      <Gallery />
+    </>
   );
 }
 
