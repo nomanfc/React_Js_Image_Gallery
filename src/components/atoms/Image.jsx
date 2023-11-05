@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "../../styles/gallery.module.css";
 
 export function Image({ src, title }) {
   const imageStyle = {
