@@ -1,0 +1,31 @@
+.button {
+  padding: 5px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  background: none;
+  color: #F22952;
+  border: 1px solid #F22952;
+  font-weight: 600;
+  font-size: 15px;
+  font-family: 'nunito sans';
+  transition: background-color 0.5s ease-in-out; 
+}
+
+
+.button:hover {
+  background: #F22952; 
+  color: white; 
+  transition: background-color 0.5s ease-in-out; 
+}
+
+.checkbox {
+  accent-color: #317873;
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  opacity: 0;
+  cursor: pointer;
+}
