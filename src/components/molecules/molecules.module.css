@@ -1,0 +1,32 @@
+.imageUploadContainer {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.imageUploadButton {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: auto;
+  cursor: pointer;
+  padding: 10px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.imageUploadIcon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 15px;
+}
+
+.imageUploadLabel {
+  font-size: 15px;
+  font-weight: 600;
+  color: black;
+}
