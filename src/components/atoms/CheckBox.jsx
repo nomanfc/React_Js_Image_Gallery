@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../styles/gallery.module.css";
+import styles from "./atoms.module.css";
 
 export function Checkbox({
   isSelected,
