@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { useImageDragAndDrop } from "../../CustomHooks/useImageDragAndDrop";
 import { Checkbox } from "../atoms/CheckBox";
 import { Image } from "../atoms/Image";
-import styles from "../../styles/gallery.module.css";
+import styles from "../../styles/styles.module.css";
 
 export default function ImageCard({
   src,
