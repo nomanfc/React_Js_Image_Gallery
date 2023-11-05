@@ -5,6 +5,8 @@ import { useToggleSelection } from "../../CustomHooks/useToggleSelection";
 import { useMoveImage } from "../../CustomHooks/useMoveImage";
 import { useRemove } from "../../CustomHooks/useRemove";
 import styles from "../../styles/gallery.module.css";
+import ImageUploadButton from "../molecules/UploadButton";
+import NavBar from "./NavBar";
 
 export default function Gallery() {
   const { selectedImages, setSelectedImages, toggleImageSelection } =
@@ -32,12 +34,13 @@ export default function Gallery() {
   return (
     <div className={styles.outerContainer}>
       <div className={styles.mainContainer}>
-        <div className={styles.navbar}>
-          <button onClick={removeSelectedImages}>Remove</button>
-        </div>
+          <NavBar removeSelectedImages={removeSelectedImages} selectedImages={selectedImages}/>
         <div className={styles.imageContainer}>
           <div className={styles.imageGrids}>
             {images.map((image, index) => renderImageCard(image, index))}
+            <div className={styles.gridItem}>
+              <ImageUploadButton/>
+            </div>
           </div>
         </div>
       </div>
