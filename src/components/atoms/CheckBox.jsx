@@ -1,14 +1,23 @@
 import React from "react";
 import styles from "../../styles/gallery.module.css";
 
-export function Checkbox({ isSelected, toggleImageSelection, id, keepCheckBoxVisible}) {
+export function Checkbox({
+  isSelected,
+  toggleImageSelection,
+  id,
+  keepCheckBoxVisible,
+}) {
+  const checkboxStyle = {
+    opacity: keepCheckBoxVisible ? 1 : 0,
+  };
+
   return (
     <input
       type="checkbox"
       id={id}
       checked={isSelected}
       className={styles.checkbox}
-      style={{opacity: keepCheckBoxVisible ? 1:0}}
+      style={checkboxStyle}
       onChange={() => toggleImageSelection(id)}
     />
   );
