@@ -1,4 +1,4 @@
-#React Js Image Gallery
+# React Js Image Gallery
 
 The project is made with React js using Atomic Design Pattern.
 
