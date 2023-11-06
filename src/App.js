@@ -1,4 +1,4 @@
-import Gallery from "./components/organisms/Gallery.jsx";
+import Gallery from "./components/pages/Gallery.jsx";
 function App() {
   return (
     <>

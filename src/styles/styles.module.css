@@ -1,3 +1,4 @@
+/* Styling for grid items and checkboxes with transitions */
 .gridItem,
 .checkbox {
   transition: opacity 1s ease-in-out, filter 0.5s ease-in-out,
@@ -5,6 +6,7 @@
     left 0.5s ease-in-out;
 }
 
+/* Styling for the outer container of the gallery */
 .outerContainer {
   height: fit-content;
   min-height: 100vh;
@@ -15,6 +17,7 @@
   background-color: #f1f9ec;
 }
 
+/* Styling for the main container of the gallery */
 .mainContainer {
   display: grid;
   grid-template-columns: 1fr;
@@ -28,6 +31,7 @@
   margin: 20px auto;
 }
 
+/* Styling for the header of the gallery */
 .navbar {
   padding: 20px 25px;
   border-radius: 10px 10px 0px 0px;
@@ -36,51 +40,22 @@
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space between;
   opacity: 1;
+  height: 35px;
   transition: opacity 1s ease-in-out;
 }
 
-.title {
-  font-size: 20px;
-  font-weight: 800;
-  color: #3b7a57;
-  opacity: 1;
-  transition: opacity 1s ease-in-out;
-}
-
-.text {
-  font-size: 16px;
-  font-weight: 600;
-  color: #3b7a57;
-  display: flex;
-  align-items: center;
-  opacity: 1;
-  transition: opacity 1s ease-in-out;
-}
-
-.textDelete {
-  font-size: 16px;
-  font-weight: 600;
-  color: #3b7a57;
-  display: flex;
-  align-items: center;
-  opacity: 1;
-  transition: opacity 1s ease-in-out;
-}
-
+/* Styling for the container of images */
 .imageContainer {
   padding: 20px 25px;
-  border-radius: 10px 10px 0px 0px;
+  grid-area: body;
+  border-radius: 0px 0px 10px 10px;
   transition: opacity 1s ease-in-out;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 }
 
-.imageContainer {
-  grid-area: body;
-  border-radius: 0px 0px 10px 10px;
-}
-
+/* Styling for the grid layout of images */
 .imageGrids {
   display: grid;
   grid-template-columns: repeat(5, 150px);
@@ -90,6 +65,7 @@
   margin: auto;
 }
 
+/* Styling for individual grid items (image cards) */
 .gridItem {
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
   border-radius: 10px;
@@ -97,27 +73,28 @@
   position: relative;
 }
 
+/* Special styling for the first grid item */
 .gridItem:first-child {
   grid-row: span 2;
   grid-column: span 2;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
 
+/* Hover effect for grid items */
 .gridItem:hover {
   cursor: pointer;
   filter: brightness(0.9);
   background: #dcdcdc;
 }
 
+/* Hover effect for checkboxes */
 .gridItem:hover .checkbox {
   opacity: 1;
 }
 
-.gridItem:hover .checkbox:not(:hover) {
-  opacity: 1;
-}
-
+/* Additional responsive styling based on screen width breakpoints */
 @media screen and (min-width: 1400px) {
+  /* Adjust grid item size for larger screens */
   .imageGrids {
     grid-auto-rows: 200px;
     grid-template-columns: repeat(5, 200px);
@@ -127,6 +104,7 @@
 }
 
 @media screen and (max-width: 1399px) {
+  /* Adjust grid item size and checkbox size for medium-sized screens */
   .imageGrids {
     grid-auto-rows: 150px;
     grid-template-columns: repeat(5, 150px);
@@ -144,17 +122,18 @@
   }
 }
 
+/* Additional responsive styling for smaller screens */
 @media screen and (max-width: 950px) {
   .mainContainer {
-    width: fit-content; /* Set the mainContainer width to 100% */
-    grid-template-areas: "header" "body"; /* Single-column layout */
+    width: fit-content;
+    grid-template-areas: "header" "body";
     margin: 20px auto;
   }
 
   .imageGrids {
     grid-auto-rows: 160px;
     grid-template-columns: repeat(4, 160px);
-    width: 100%; /* Set the imageGrids width to 100% */
+    width: 100%;
     margin: auto;
   }
 
@@ -173,16 +152,17 @@
   }
 }
 
+/* Additional responsive styling for smaller screens */
 @media screen and (max-width: 750px) {
   .imageGrids {
     grid-auto-rows: 190px;
     grid-template-columns: repeat(2, 190px);
-    width: 100%; /* Set the imageGrids width to 100% */
+    width: 100%;
     margin: auto;
   }
 
   .mainContainer {
-    width: fit-content; /* Set the mainContainer width to 100% */
+    width: fit-content;
     margin: 20px auto;
   }
 
@@ -200,16 +180,17 @@
   }
 }
 
+/* Additional responsive styling for even smaller screens */
 @media screen and (max-width: 485px) {
   .imageGrids {
     grid-auto-rows: 150px;
     grid-template-columns: repeat(2, 150px);
-    width: 100%; /* Set the imageGrids width to 100% */
+    width: 100%;
     margin: auto;
   }
 
   .mainContainer {
-    width: fit-content; /* Set the mainContainer width to 100% */
+    width: fit-content;
     margin: 20px auto;
   }
 

@@ -20,8 +20,9 @@
 }
 
 .imageUploadIcon {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
   margin-bottom: 15px;
 }
 
@@ -29,4 +30,43 @@
   font-size: 15px;
   font-weight: 600;
   color: black;
+}
+
+.checkbox {
+  accent-color: #317873;
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #3b7a57;
+  display: flex;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.textDelete {
+  font-size: 16px;
+  font-weight: 600;
+  color: #3b7a57;
+  display: flex;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #3b7a57;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
 }

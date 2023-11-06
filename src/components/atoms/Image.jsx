@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Image({ src, title, className }) {
+export function Image({ src, title, className}) {
   const imageStyle = {
     height: "100%",
     width: "100%",
