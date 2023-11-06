@@ -21,6 +21,8 @@ export default function ImageCard({
   const isSelected = selectedImages.includes(id);
   // State to control whether to keep the checkbox visible
   const [keepCheckBoxVisible, setKeepCheckBoxVisible] = useState(false);
+  
+  const selectedOpacity = isSelected ? 0.5 : 1;
 
   // Function to handle toggling image selection
   const handleToggleSelection = () => toggleImageSelection(id);
@@ -28,7 +30,7 @@ export default function ImageCard({
   return (
     <div
       ref={ref}
-      style={{ opacity }}
+      style={{ opacity: selectedOpacity }}
       className={styles.gridItem}
       onMouseEnter={() => setKeepCheckBoxVisible(true)}
       onMouseLeave={() => setKeepCheckBoxVisible(isSelected ? true : false)}

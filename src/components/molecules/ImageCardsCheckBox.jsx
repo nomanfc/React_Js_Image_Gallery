@@ -11,6 +11,7 @@ export function Checkbox({
 }) {
   const checkboxStyle = {
     opacity: keepCheckBoxVisible ? 1 : 0,
+    
   };
 
   return (
