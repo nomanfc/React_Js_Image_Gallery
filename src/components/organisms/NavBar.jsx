@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { FaCheckSquare } from "react-icons/fa";
 import { BsFillCheckCircleFill } from "react-icons/bs";
 import Button from "../atoms/Button";

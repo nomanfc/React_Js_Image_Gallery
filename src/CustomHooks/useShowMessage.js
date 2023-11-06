@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import  { useState} from "react";
 
 export default function useShowMessage(removeSelectedImages) {
   const [showMessage, setShowMessage] = useState(false);
