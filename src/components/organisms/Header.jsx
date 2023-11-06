@@ -21,6 +21,7 @@ export function Header({ removeSelectedImages, selectedImages }) {
         <DeleteMessage showMessage={showMessage} />
         <SelectedText countSelection={countSelection} />
       </div>
+
       <div>
         <Button
           title="Delete"

@@ -33,17 +33,18 @@
 
 /* Styling for the header of the gallery */
 .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 20px 25px;
   border-radius: 10px 10px 0px 0px;
   grid-area: header;
   color: black;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
-  display: flex;
-  align-items: center;
-  justify-content: space between;
   opacity: 1;
   height: 35px;
   transition: opacity 1s ease-in-out;
+
 }
 
 /* Styling for the container of images */
