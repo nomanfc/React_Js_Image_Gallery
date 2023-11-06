@@ -1,17 +1,35 @@
+import { useState, useEffect } from "react";
 import { FaCheckSquare } from "react-icons/fa";
+import { BsFillCheckCircleFill } from "react-icons/bs";
 import Button from "../atoms/Button";
 import styles from "../../styles/styles.module.css";
+import useShowMessage from "../../CustomHooks/useShowMessage";
 
 export default function NavBar({ removeSelectedImages, selectedImages }) {
   let countSelection = selectedImages.length;
+
+  const {showMessage, handleRemoveSelectedImages} = useShowMessage(removeSelectedImages);
 
   return (
     <div>
       <div className={styles.navbar}>
         <div>
           <div
+            className={styles.textDelete}
+            style={{ display: showMessage ? "flex" : "none" }}
+          >
+            <BsFillCheckCircleFill
+              style={{ fontSize: "20px", paddingRight: "10px" }}
+            />
+
+            {"Deletion Complete"}
+          </div>
+
+          <div
             className={styles.title}
-            style={{ display: countSelection < 1 ? "flex" : "none" }}
+            style={{
+              display: countSelection < 1 && !showMessage ? "flex" : "none",
+            }}
           >
             Image Gallery
           </div>
@@ -31,7 +49,7 @@ export default function NavBar({ removeSelectedImages, selectedImages }) {
         <div style={{ height: "35px" }}>
           <Button
             title="Delete"
-            onClick={removeSelectedImages}
+            onClick={handleRemoveSelectedImages}
             countSelection={countSelection}
           />
         </div>
