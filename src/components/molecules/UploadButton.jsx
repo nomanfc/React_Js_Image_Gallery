@@ -1,15 +1,15 @@
 import React from "react";
+import { Image } from "../atoms/Image";
 import styles from "./molecules.module.css";
 
 function ImageUploadButton() {
   return (
     <div className={styles.imageUploadContainer}>
       <label htmlFor="file" className={styles.imageUploadButton}>
-        <img
-          src="./icons/upload.png"
-          alt="Upload Icon"
-          className={styles.imageUploadIcon}
-        />
+        <div className={styles.imageUploadIcon}>
+          <Image src="./icons/upload.png" title="Upload Icon" />
+        </div>
+
         <span className={styles.imageUploadLabel}>Add Image</span>
       </label>
       <input
