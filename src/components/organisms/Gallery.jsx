@@ -1,5 +1,5 @@
 import React from "react";
-import galleryList from "../../data/data";
+import {galleryList} from "../../data/data";
 import ImageCard from "../molecules/ImageCard";
 import { useToggleSelection } from "../../CustomHooks/useToggleSelection";
 import { useMoveImage } from "../../CustomHooks/useMoveImage";

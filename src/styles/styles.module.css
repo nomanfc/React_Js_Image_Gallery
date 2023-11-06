@@ -59,6 +59,16 @@
   transition: opacity 1s ease-in-out;
 }
 
+.textDelete{
+  font-size: 16px;
+  font-weight: 600;
+  color: #3B7A57;
+  display: flex;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
 .imageContainer {
   padding: 20px 25px;
   border-radius: 10px 10px 0px 0px;
@@ -95,7 +105,7 @@
 
 .gridItem:hover {
   cursor: pointer;
-  filter: brightness(0.8);
+  filter: brightness(0.9);
   background: #dcdcdc;
 }
 
