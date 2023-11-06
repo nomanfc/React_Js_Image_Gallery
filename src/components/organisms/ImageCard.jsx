@@ -18,11 +18,12 @@ export default function ImageCard({
 
   // Get the opacity and other drag-and-drop functionality using a custom hook
   const { opacity } = useImageDragAndDrop(id, index, moveImage, ref);
+
   const isSelected = selectedImages.includes(id);
   // State to control whether to keep the checkbox visible
   const [keepCheckBoxVisible, setKeepCheckBoxVisible] = useState(false);
-  
-  const selectedOpacity = isSelected ? 0.5 : 1;
+
+  const selectedOpacity = isSelected ? 0.5 : opacity;
 
   // Function to handle toggling image selection
   const handleToggleSelection = () => toggleImageSelection(id);
