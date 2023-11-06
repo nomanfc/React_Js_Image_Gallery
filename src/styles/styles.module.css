@@ -44,7 +44,7 @@
 .title {
   font-size: 20px;
   font-weight: 800;
-  color: #3B7A57;
+  color: #3b7a57;
   opacity: 1;
   transition: opacity 1s ease-in-out;
 }
@@ -52,17 +52,17 @@
 .text {
   font-size: 16px;
   font-weight: 600;
-  color: #3B7A57;
+  color: #3b7a57;
   display: flex;
   align-items: center;
   opacity: 1;
   transition: opacity 1s ease-in-out;
 }
 
-.textDelete{
+.textDelete {
   font-size: 16px;
   font-weight: 600;
-  color: #3B7A57;
+  color: #3b7a57;
   display: flex;
   align-items: center;
   opacity: 1;
@@ -108,7 +108,6 @@
   filter: brightness(0.9);
   background: #dcdcdc;
 }
-
 
 .gridItem:hover .checkbox {
   opacity: 1;
@@ -193,6 +192,33 @@
 
   .navbar {
     padding: 20px 20px;
+  }
+
+  .checkbox {
+    height: 15px;
+    width: 15px;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .imageGrids {
+    grid-auto-rows: 150px;
+    grid-template-columns: repeat(2, 150px);
+    width: 100%; /* Set the imageGrids width to 100% */
+    margin: auto;
+  }
+
+  .mainContainer {
+    width: fit-content; /* Set the mainContainer width to 100% */
+    margin: 20px auto;
+  }
+
+  .imageContainer {
+    padding: 10px 10px;
+  }
+
+  .navbar {
+    padding: 10px 10px;
   }
 
   .checkbox {
