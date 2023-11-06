@@ -2,64 +2,61 @@
 
 The project is made with React js using Atomic Design Pattern.
 
-Inside component folder there are atoms, molecules, organisms, and pages folder:
+Inside the `component` folder, there are `atoms`, `molecules`, `organisms`, and `pages` folders.
 
-
-components
-
-atoms:
+## Atoms
 
 Smallest single elements are here in this folder. These will be reused all over the app.
 
-Button, 
-Image, 
-Input, 
-Text  
-atoms.module.css
+- Button
+- Image
+- Input
+- Text
 
-molecules
+`atoms.module.css`
 
-This folder contains components which are using atoms.
+## Molecules
 
-GalleryUploadButton : It is the upload button in image gallery.
-HeaderDeleteMessage : This is deletion message show after files are deleted.
-HeaderSelectedText : How many Items are selected shown from here.
-HeaderTitle: It is the title Image Gallery.
-ImageCardsCheckbox : checkbox used on images.
-molecules.module.css : corresponding css files are here.
+This folder contains components that are using atoms.
 
-organisms
+- GalleryUploadButton: It is the upload button in the image gallery.
+- HeaderDeleteMessage: This is a deletion message shown after files are deleted.
+- HeaderSelectedText: How many items are selected shown from here.
+- HeaderTitle: It is the title of the Image Gallery.
+- ImageCardsCheckbox: Checkbox used on images.
 
-This folder contains organs build by using molecules
+`molecules.module.css`: Corresponding CSS files are here.
 
-Header : It combines the header molecules. It is the top bar here different message are shown.
-ImageCards: It combines image and check box together.
+## Organisms
 
-pages
+This folder contains organs built by using molecules.
 
-Gallery: It is the main file which holds everything. It contains imageCards and header. 
+- Header: It combines the header molecules. It is the top bar where different messages are shown.
+- ImageCards: It combines image and checkbox together.
 
-customHooks 
+## Pages
 
-It contains different custom hooks used in this App
+`Gallery`: It is the main file that holds everything. It contains `ImageCards` and `Header`.
 
-useDragAndDrop: It controls the drag and drop of images in the gallery.
-useMoveImage: It controls the re-ordering movement used in useDragAndDrop.
-useRemove: It handles the delete operation.
-useShowMessage: It handles the message shown after deletion.
-useToggleSelection: It controls the selection toggle. Keeps count of how many item selected.
+## Custom Hooks
 
+It contains different custom hooks used in this App.
 
-data 
+- `useDragAndDrop`: It controls the drag and drop of images in the gallery.
+- `useMoveImage`: It controls the re-ordering movement used in `useDragAndDrop`.
+- `useRemove`: It handles the delete operation.
+- `useShowMessage`: It handles the message shown after deletion.
+- `useToggleSelection`: It controls the selection toggle. Keeps count of how many items are selected.
 
-Images used in this App
+## Data
 
-data : It is the array of object of given images, which contain title, src, id.
+Images used in this App.
 
+`data`: It is an array of objects of given images, which contain title, src, id.
 
-styles 
+## Styles
 
-It contains shared styles used in gallery page and organisms.
+It contains shared styles used in the gallery page and organisms.
 
-index: It controls the imported font used in this app and some default css properties.
-styles.module.css: It holds the css used in multiple components and media queries. 
+- `index`: It controls the imported font used in this app and some default CSS properties.
+- `styles.module.css`: It holds the CSS used in multiple components and media queries.
